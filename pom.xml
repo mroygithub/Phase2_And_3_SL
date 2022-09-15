@@ -128,7 +128,7 @@
                     <!-- This is For TestNG maven Run -->
                     <suiteXmlFiles>
                        <suiteXmlFile>TestNG.xml</suiteXmlFile>  <!--This is For TestNG Run-->
-                     <!--   <suiteXmlFile>RestAssured.xml</suiteXmlFile> <!--This is For Rest Assured Run-->
+                     <!--   <suiteXmlFile>RestAssured.xml</suiteXmlFile> --> <!--This is For Rest Assured Run-->
                     </suiteXmlFiles>
                     <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
