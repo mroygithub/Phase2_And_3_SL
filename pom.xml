@@ -92,6 +92,22 @@
             <version>3.11</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.hamcrest/hamcrest-all -->
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-all</artifactId>
+            <version>1.3</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>4.5.1</version>
+            <scope>test</scope>
+        </dependency>
+
 
     </dependencies>
 
@@ -103,10 +119,17 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M4</version>
                 <configuration>
-                    <includes>
-                        <include>**/testRunner*.java</include>
-                    </includes>
 
+                <!-- This is For Cucumber maven Run -->
+                  <!--  <includes>
+                        <include>**/testRunner*.java</include>
+                    </includes> -->
+
+                    <!-- This is For TestNG maven Run -->
+                    <suiteXmlFiles>
+                       <!-- <suiteXmlFile>TestNG.xml</suiteXmlFile> --> <!--This is For TestNG Run-->
+                        <suiteXmlFile>RestAssured.xml</suiteXmlFile> <!--This is For Rest Assured Run-->
+                    </suiteXmlFiles>
                     <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
             </plugin>

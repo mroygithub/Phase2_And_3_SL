@@ -1,9 +1,8 @@
-stepDef/testNG_SH.class
-stepDef/test001.class
+stepDef/RestAssuredTask.class
+stepDef/StarHealth_testNG_PrintLinks.class
 action/Action.class
-stepDef/StarHealth_testNG.class
 pageObject/starHealCuCumber.class
-pom/googlehome_page.class
+stepDef/StarHealth_testNG_Home.class
 testRunner/testRunner.class
 stepDef/StarHealth_Cucumber.class
 pageObject/starHealtestNG.class

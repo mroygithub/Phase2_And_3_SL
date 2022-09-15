@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-09-15T05:25:10Z" name="Surefire suite" finished-at="2022-09-15T05:25:24Z" duration-ms="14183">
+  <suite started-at="2022-09-15T14:05:46Z" name="Suite1" finished-at="2022-09-15T14:05:55Z" duration-ms="9048">
     <groups>
     </groups>
-    <test started-at="2022-09-15T05:25:10Z" name="Surefire test" finished-at="2022-09-15T05:25:24Z" duration-ms="14183">
-    </test> <!-- Surefire test -->
-  </suite> <!-- Surefire suite -->
+    <test started-at="2022-09-15T14:05:46Z" name="Rest_Assured_Assignment_Testing" finished-at="2022-09-15T14:05:55Z" duration-ms="9048">
+      <class name="stepDef.RestAssuredTask">
+        <test-method signature="Rest_Assured_Assignment_001()[pri:0, instance:stepDef.RestAssuredTask@6a472554]" started-at="2022-09-15T14:05:46Z" name="Rest_Assured_Assignment_001" finished-at="2022-09-15T14:05:55Z" duration-ms="9004" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Rest_Assured_Assignment_001 -->
+        <test-method signature="Rest_Assured_Assignment_003()[pri:0, instance:stepDef.RestAssuredTask@6a472554]" started-at="2022-09-15T14:05:46Z" name="Rest_Assured_Assignment_003" finished-at="2022-09-15T14:05:52Z" duration-ms="6213" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Rest_Assured_Assignment_003 -->
+        <test-method signature="Rest_Assured_Assignment_002()[pri:0, instance:stepDef.RestAssuredTask@6a472554]" started-at="2022-09-15T14:05:46Z" name="Rest_Assured_Assignment_002" finished-at="2022-09-15T14:05:52Z" duration-ms="6203" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Rest_Assured_Assignment_002 -->
+      </class> <!-- stepDef.RestAssuredTask -->
+    </test> <!-- Rest_Assured_Assignment_Testing -->
+  </suite> <!-- Suite1 -->
 </testng-results>
