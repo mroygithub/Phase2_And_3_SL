@@ -66,7 +66,7 @@ public class StarHealth_testNG_PrintLinks extends Action {
             driver = new ChromeDriver();
             //Maximize the browser
             driver.manage().window().maximize();
-            driver.get(readXL_and_return_URL());
+            driver.get("https://www.starhealth.in/");
             driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(30));
             logger.createNode("User can Successfully launch the Chrome Browser");
 

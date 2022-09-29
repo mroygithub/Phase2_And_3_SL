@@ -37,7 +37,7 @@ public class StarHealth_Cucumber {
 
         // initialize the HtmlReporter
 
-// Create an object of Extent Reports
+        // Create an object of Extent Reports
         extent = new ExtentReports();
 
         spark = new ExtentSparkReporter(System.getProperty("user.dir") + "/Report_Cucumber_Home.html");

@@ -14,7 +14,6 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import org.testng.asserts.Assertion;
 import pageObject.starHealtestNG;
 import org.openqa.selenium.interactions.Actions;
 import java.time.Duration;
@@ -74,7 +73,7 @@ public class StarHealth_testNG_Home extends Action {
             driver = new ChromeDriver();
             //Maximize the browser
             driver.manage().window().maximize();
-            driver.get(readXL_and_return_URL());
+            driver.get("https://www.starhealth.in/");
             driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(30));
             logger.createNode("User can Successfully launch the Chrome Browser");
 
@@ -138,13 +137,39 @@ public class StarHealth_testNG_Home extends Action {
         driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(30));
         logger.pass("User clicked on back Button");
 
-        Assert.assertEquals(name,driver.findElement(pageobj.nameFiled()).getAttribute("value"));
-        Assert.assertEquals(mobile,driver.findElement(pageobj.mobileFiled()).getAttribute("value"));
-        Assert.assertEquals(email,driver.findElement(pageobj.email_Filed()).getAttribute("value"));
+
+        // Read Excel value for assertions ..
+
+        String name_from_XL = read_data_from_XL("Name");
+        String mobile_from_XL = read_data_from_XL("Mobile");
+        String email_from_XL = read_data_from_XL("Email");
+
+
+        Assert.assertEquals(name_from_XL,driver.findElement(pageobj.nameFiled()).getAttribute("value"));
+        Assert.assertEquals(mobile_from_XL,driver.findElement(pageobj.mobileFiled()).getAttribute("value"));
+        Assert.assertEquals(email_from_XL,driver.findElement(pageobj.email_Filed()).getAttribute("value"));
 
         logger.pass("Name field has expected value as : "+ driver.findElement(pageobj.nameFiled()).getAttribute("value"));
-        logger.pass("Phone field has expected value as : "+ driver.findElement(pageobj.mobileFiled()).getAttribute("value"));
+        logger.pass("Mobile field has expected value as : "+ driver.findElement(pageobj.mobileFiled()).getAttribute("value"));
         logger.pass("Email field has expected value as : "+ driver.findElement(pageobj.email_Filed()).getAttribute("value"));
+
+
+
+        // Validate Social media options at starhealth Footer sections ...
+
+
+        String SocialmediaoptionsFromXL = read_data_from_XL("Social_Media_Options");
+        if(SocialmediaoptionsFromXL.contains(","))
+        {
+            try {
+                String[] countOfOptionBySplit = SocialmediaoptionsFromXL.split(",");
+                for (int i = 0; i < countOfOptionBySplit.length; i++) {
+                    Assert.assertTrue(driver.findElement(pageobj.footerSocialMediaOptions(countOfOptionBySplit[i])).isDisplayed());
+                    logger.pass("The Social Medial Option =>" + countOfOptionBySplit[i] + " " + "is available");
+                }
+            }
+            catch(Exception e){logger.pass("The Social Medial Option is not available");}
+        }
 
 
 

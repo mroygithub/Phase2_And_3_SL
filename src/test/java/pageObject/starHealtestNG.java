@@ -15,6 +15,7 @@ public class starHealtestNG {
     public By next_button(){ return By.xpath("//span[text()='Next']");}
     public By back_button(){ return By.xpath("//span[text()='Back']");}
     public By Twitter_link(){ return By.xpath("//a[contains(@href,'twitter')]");}
+    public By footerSocialMediaOptions(String option){ return By.xpath("//a[contains(@href,'"+option+"')]");}
 
 
 

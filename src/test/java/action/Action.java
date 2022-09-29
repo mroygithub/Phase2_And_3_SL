@@ -1,55 +1,39 @@
 package action;
-import java.io.File;
 import java.io.FileInputStream;
-import java.util.ArrayList;
-import java.util.Iterator;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class Action {
 
 
-    public  String readXL_and_return_URL(){
+    public String read_data_from_XL(String columnName) {
 
-        String url = null;
+        String field_value = null;
 
         try {
+            FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/starhealth_testNG_datasheet.xlsx");
+            XSSFWorkbook workbook = new XSSFWorkbook(fis);
+            XSSFSheet sheet = workbook.getSheet("starhealth");
+            XSSFRow row = sheet.getRow(0);
 
+            int col_num = -1;
 
-            FileInputStream file = new FileInputStream(new File(System.getProperty("user.dir")+"/starhealth_testNG_datasheet.xlsx"));
-
-            // Create Workbook instance holding reference to .xlsx file
-            XSSFWorkbook workbook = new XSSFWorkbook(file);
-
-            // Get first/desired sheet from the workbook
-            XSSFSheet sheet = workbook.getSheetAt(0);
-            // Iterate through each rows one by one
-            Iterator<Row> rowIterator = sheet.iterator();
-            while (rowIterator.hasNext()) {
-                Row row = rowIterator.next();
-                // For each row, iterate through all the columns
-                Iterator<Cell> cellIterator = row.cellIterator();
-                while (cellIterator.hasNext()) {
-                    Cell cell = cellIterator.next();
-                    // Check the cell type and format accordingly
-                    switch (cell.getCellType()) {
-                        case Cell.CELL_TYPE_NUMERIC:
-                            System.out.print(cell.getNumericCellValue());
-                            break;
-                        case Cell.CELL_TYPE_STRING:
-                           // System.out.print(cell.getStringCellValue());
-                            url = cell.getStringCellValue();
-                            break;
-                    }
-                }
-                System.out.println("");
+            for (int i = 0; i < row.getLastCellNum(); i++) {
+                if (row.getCell(i).getStringCellValue().trim().equals(columnName))
+                    col_num = i;
             }
-            file.close();
+
+            row = sheet.getRow(1);
+            XSSFCell cell = row.getCell(col_num);
+
+            field_value = cell.getStringCellValue();
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        catch(Exception e) {e.printStackTrace();}
-        return url ;
+        return field_value;
     }
 
 
