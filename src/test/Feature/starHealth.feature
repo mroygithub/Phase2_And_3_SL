@@ -10,7 +10,7 @@ Feature: Test StarHealth
     Then User validate Star Health home page title using Junit assertion
     Then User clicks on Buy Now Button
     And User Type Name as "<FullName>"
-    And User Type Phome as "<PhNo>"
+    And User Type Phone as "<PhNo>"
     And User Type PIN as "<PIN>"
     When User click on I need health insurance for drop down
     Then User select option as "<optionPlan>"

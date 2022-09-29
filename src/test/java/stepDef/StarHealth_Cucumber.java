@@ -164,8 +164,8 @@ public class StarHealth_Cucumber {
 
     }
 
-    @Then("User Type Phome as {string}")
-    public void user_type_phome_as(String ph_no) {
+    @Then("User Type Phone as {string}")
+    public void user_type_phone_as(String ph_no) {
 
         phone_no = ph_no;
 
