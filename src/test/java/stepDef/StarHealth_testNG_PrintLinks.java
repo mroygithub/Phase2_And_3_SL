@@ -71,8 +71,8 @@ public class StarHealth_testNG_PrintLinks extends Action {
             //dc.setBrowserName("chrome");
             //System.setProperty("webdriver.chrome.driver", "/Users/mithunroy/Downloads/BrowserDrivers/chromedriver");
             // Instantiate a ChromeDriver class.
-           // WebDriverManager.chromedriver().driverVersion("102.0.5005.61").setup();
-            WebDriverManager.chromedriver().driverVersion("107.0.5304.110").setup();
+            WebDriverManager.chromedriver().driverVersion("102.0.5005.61").setup();
+           // WebDriverManager.chromedriver().driverVersion("107.0.5304.110").setup();
             driver = new ChromeDriver();
             //driver = new RemoteWebDriver(new URL("http://localhost:4444"),dc);
             //driver = new ChromeDriver();
