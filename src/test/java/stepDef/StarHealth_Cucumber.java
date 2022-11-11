@@ -65,6 +65,9 @@ public class StarHealth_Cucumber {
 
         try {
 
+            System.out.println("##### Starting Chrome Browser ############");
+
+
             ///System.setProperty("webdriver.chrome.driver", "/Users/mithunroy/Downloads/BrowserDrivers/chromedriver");
             WebDriverManager.chromedriver().driverVersion("102.0.5005.61").setup();
 

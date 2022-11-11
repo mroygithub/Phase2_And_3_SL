@@ -65,6 +65,8 @@ public class StarHealth_testNG_PrintLinks extends Action {
         // System Property for Chrome Driver
 
         try {
+            System.out.println("##### Starting Chrome Browser ############");
+
             //DesiredCapabilities dc = new DesiredCapabilities();
             //dc.setBrowserName("chrome");
             //System.setProperty("webdriver.chrome.driver", "/Users/mithunroy/Downloads/BrowserDrivers/chromedriver");
