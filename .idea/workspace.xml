@@ -2,39 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a61a68cc-dcf9-4bec-8750-7c07d1646d0a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GridTestNGXML.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GridTestNGXML.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Report_Cucumber_Home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Report_Cucumber_Home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Report_HomePagePlan.html" beforeDir="false" afterPath="$PROJECT_DIR$/Report_HomePagePlan.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Report_TestNG_PrintHomePageLinks.html" beforeDir="false" afterPath="$PROJECT_DIR$/Report_TestNG_PrintHomePageLinks.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sample.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/action/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/action/Action.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/action/Create_XML.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/action/Create_XML.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/action/Employees_ReadXML.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/action/Employees_ReadXML.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/action/WriteIntoXL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/action/WriteIntoXL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/action/readXML.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/action/readXML.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/action/testNG_XLReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/action/testNG_XLReport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/gridImplementation/TestChrome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/gridImplementation/TestChrome.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/gridImplementation/TestFirefox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/gridImplementation/TestFirefox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/gridImplementation/gridBaseCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/gridImplementation/gridBaseCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pageObject/starHealCuCumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObject/starHealCuCumber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pageObject/starHealtestNG.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObject/starHealtestNG.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/stepDef/StarHealth_Cucumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDef/StarHealth_Cucumber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepDef/StarHealth_testNG_Examples.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDef/StarHealth_testNG_Examples.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/stepDef/StarHealth_testNG_Home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDef/StarHealth_testNG_Home.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/stepDef/StarHealth_testNG_PrintLinks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDef/StarHealth_testNG_PrintLinks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testRunner/testRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testRunner/testRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cucumber-report/cucumber.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber-report/cucumber.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cucumber-report/cucumber.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber-report/cucumber.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/pageObject/starHealCuCumber.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pageObject/starHealCuCumber.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/pageObject/starHealtestNG.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pageObject/starHealtestNG.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/stepDef/RestAssuredTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/stepDef/RestAssuredTask.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/stepDef/StarHealth_Cucumber.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/stepDef/StarHealth_Cucumber.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/stepDef/StarHealth_testNG_Home.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/stepDef/StarHealth_testNG_Home.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/stepDef/StarHealth_testNG_PrintLinks.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/stepDef/StarHealth_testNG_PrintLinks.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testNG.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testNG.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testNG_XL.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testNG_XL.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -55,7 +25,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/stepDef/StarHealth_testNG_Examples.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="328">
@@ -64,11 +34,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/stepDef/StarHealth_Cucumber.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="503">
-              <caret line="34" selection-start-line="34" selection-end-line="34" />
+            <state relative-caret-position="318">
+              <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/stepDef/StarHealth_testNG_PrintLinks.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="73">
+              <caret line="67" column="52" selection-start-line="67" selection-end-line="68" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -88,8 +70,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/stepDef/StarHealth_testNG_Home.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="29" column="11" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
+            <state relative-caret-position="293">
+              <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -156,12 +138,12 @@
         <option value="$PROJECT_DIR$/src/test/java/action/readXML.java" />
         <option value="$PROJECT_DIR$/testNG.xml" />
         <option value="$PROJECT_DIR$/src/test/java/pageObject/starHealtestNG.java" />
-        <option value="$PROJECT_DIR$/src/test/java/stepDef/StarHealth_testNG_PrintLinks.java" />
-        <option value="$PROJECT_DIR$/src/test/java/stepDef/StarHealth_testNG_Home.java" />
-        <option value="$PROJECT_DIR$/src/test/java/stepDef/StarHealth_Cucumber.java" />
         <option value="$PROJECT_DIR$/sample.txt" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/stepDef/StarHealth_testNG_Examples.java" />
+        <option value="$PROJECT_DIR$/src/test/java/stepDef/StarHealth_testNG_PrintLinks.java" />
+        <option value="$PROJECT_DIR$/src/test/java/stepDef/StarHealth_testNG_Home.java" />
+        <option value="$PROJECT_DIR$/src/test/java/stepDef/StarHealth_Cucumber.java" />
       </list>
     </option>
   </component>
@@ -595,26 +577,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/stepDef/StarHealth_testNG_PrintLinks.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="63" selection-start-line="63" selection-end-line="63" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/stepDef/StarHealth_testNG_Home.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="29" column="11" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/pageObject/starHealtestNG.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -653,16 +615,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/stepDef/StarHealth_Cucumber.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RestAssured.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -674,6 +626,36 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="328">
           <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/stepDef/StarHealth_testNG_PrintLinks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="67" column="52" selection-start-line="67" selection-end-line="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/stepDef/StarHealth_testNG_Home.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/stepDef/StarHealth_Cucumber.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
