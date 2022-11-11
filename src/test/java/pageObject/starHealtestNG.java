@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 public class starHealtestNG {
 
 
-    public By homepageLogo(){ return By.xpath("//img[@class='jss61']");}
+    public By homepageLogo(){ return By.xpath("//img[@class='jss66']");}
     public By plan_link(){ return By.xpath("//div[@class='homeHeaderMenuGA']");}
     public By forMyFamilyLink(){ return By.xpath("(//div[@class='allPlansGA'])[1]");}
     public By nameFiled(){ return By.xpath("//input[@id='name']");}

@@ -1,0 +1,81 @@
+package stepDef;
+
+import action.Action;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+import org.openqa.selenium.*;
+import java.io.*;
+import org.apache.commons.io.*;
+
+
+import java.time.Duration;
+
+
+public class StarHealth_testNG_Examples extends Action {
+
+    private WebDriver driver;
+
+    public static String screenshotPath = System.getProperty("user.dir")+"/FailureScreenshot/";
+
+
+    // Using testNG  @BeforeClass --> Launching The Browser ...
+    @BeforeClass
+    public synchronized void setUp(){
+
+        try {
+            WebDriverManager.chromedriver().driverVersion("106.0.5249.61").setup();
+            // Instantiate a ChromeDriver class.
+            driver = new ChromeDriver();
+            //Maximize the browser
+            driver.manage().window().maximize();
+            driver.get("https://www.google.com");
+            driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(30));
+        }
+        catch(Exception e){}
+    }
+
+
+    @Test
+    public void starhealth001_PrintAllLink() throws Exception{
+
+        // Validate Google Logo , if not available then take screenshot ...
+        try{
+
+            driver.findElement(By.xpath("//img[@class='lnXdpd1']")).isDisplayed();
+        }
+        catch(Exception e){takeSnapShot("google_logo");
+            System.out.println("Google Logo is not available");}
+    }
+
+    // Reusable method to capture screenshot ...Then Save it to Project File Structure
+
+    public void takeSnapShot(String filename) throws Exception{
+        //Convert web driver object to TakeScreenshot
+                TakesScreenshot scrShot =((TakesScreenshot)driver);
+        //Call getScreenshotAs method to create image file
+                File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
+        //Move image file to new destination
+                File DestFile=new File(screenshotPath+filename+".png");
+        //Copy file at destination
+        FileUtils.copyFile(SrcFile, DestFile);
+    }
+
+
+    // Using testNG  @AfterClass  --> Closing The Browser ...
+    @AfterClass
+    public synchronized void tearDown(){
+
+        driver.quit();
+
+    }
+
+}

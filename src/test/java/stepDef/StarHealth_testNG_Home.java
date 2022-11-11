@@ -21,6 +21,8 @@ import java.util.Iterator;
 import java.util.Set;
 import org.testng.annotations.Parameters;
 import org.openqa.selenium.JavascriptExecutor;
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 
 
 public class StarHealth_testNG_Home extends Action {
@@ -68,7 +70,8 @@ public class StarHealth_testNG_Home extends Action {
         // System Property for Chrome Driver
 
         try {
-            System.setProperty("webdriver.chrome.driver", "/Users/mithunroy/Downloads/BrowserDrivers/chromedriver");
+            //System.setProperty("webdriver.chrome.driver", "/Users/mithunroy/Downloads/BrowserDrivers/chromedriver");
+            WebDriverManager.chromedriver().driverVersion("106.0.5249.61").setup();
             // Instantiate a ChromeDriver class.
             driver = new ChromeDriver();
             //Maximize the browser

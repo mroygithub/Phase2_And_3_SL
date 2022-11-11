@@ -13,14 +13,11 @@ import org.junit.runner.RunWith;
                 "pretty",
                 "json:target/cucumber-report/cucumber.json",
                 "html:target/cucumber-report/cucumber.html"}
-               // ,tags= "@Sanity , @Smoke"
+
         )
 
 
 public class testRunner {
-
-
-
 
 
 }

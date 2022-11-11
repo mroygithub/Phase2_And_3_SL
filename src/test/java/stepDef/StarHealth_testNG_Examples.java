@@ -1,4 +1,4 @@
-package stepDef;
+/*package stepDef;
 
 import action.Action;
 import com.aventstack.extentreports.ExtentReports;
@@ -12,6 +12,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import org.openqa.selenium.*;
+import java.io.*;
+import org.apache.commons.io.*;
+
 
 import java.time.Duration;
 
@@ -20,70 +24,50 @@ public class StarHealth_testNG_Examples extends Action {
 
     private WebDriver driver;
 
-    //helps to generate the logs in the test report.
-
-    private ExtentSparkReporter spark;
-    private ExtentReports extent;
-    private ExtentTest logger;
-
+    public static String screenshotPath = System.getProperty("user.dir")+"/FailureScreenshot/";
 
 
     // Using testNG  @BeforeClass --> Launching The Browser ...
     @BeforeClass
     public synchronized void setUp(){
 
-
-        // initialize the HtmlReporter
-
-        // Create an object of Extent Reports
-        extent = new ExtentReports();
-
-        spark = new ExtentSparkReporter(System.getProperty("user.dir") + "/Report_TestNG_PrintHomePageLinks.html");
-        extent.attachReporter(spark);
-        extent.setSystemInfo("Host Name", "StarHealth Application - Home Print All Links");
-        extent.setSystemInfo("Environment", "Production");
-        extent.setSystemInfo("User Name", "Test Team");
-        spark.config().setDocumentTitle("Report Print All Links Application QA ");
-        // Name of the report
-        spark.config().setReportName("StarHealth Application - Home Print All Links");
-        // Dark Theme
-        spark.config().setTheme(Theme.STANDARD);
-        logger = extent.createTest("StarHealth Application - Home Print All Links");
-
-
-
-        // System Property for Chrome Driver
-
         try {
-            //System.setProperty("webdriver.chrome.driver", "/Users/mithunroy/Downloads/BrowserDrivers/chromedriver");
             WebDriverManager.chromedriver().driverVersion("106.0.5249.61").setup();
             // Instantiate a ChromeDriver class.
             driver = new ChromeDriver();
             //Maximize the browser
             driver.manage().window().maximize();
-            driver.get("https://www.starhealth.in/");
+            driver.get("https://www.google.com");
             driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(30));
-            logger.createNode("User can Successfully launch the Chrome Browser");
-
         }
-        catch(Exception e){logger.fail("Instantiate of the Chrome Browser Failed");}
+        catch(Exception e){}
     }
 
 
     @Test
-    public synchronized void starhealth001_PrintAllLink(){
+    public void starhealth001_PrintAllLink() throws Exception{
 
+        // Validate Google Logo , if not available then take screenshot ...
+        try{
 
-        // Get the Count of All Links ...
-
-        int totalLinkCount = driver.findElements(By.xpath("//a")).size();
-
-        for(int i=1 ; i<=totalLinkCount ; i++){
-
-            logger.pass(driver.findElement(By.xpath("(//a)["+i+"]")).getText().toString());
+            driver.findElement(By.xpath("//img[@class='lnXdpd1']")).isDisplayed();
         }
+        catch(Exception e){takeSnapShot("google_logo");
+            System.out.println("Google Logo is not available");}
     }
 
+    // Reusable method to capture screenshot ...Then Save it to Project File Structure
+
+    public void takeSnapShot(String filename) throws Exception{
+        //Convert web driver object to TakeScreenshot
+                TakesScreenshot scrShot =((TakesScreenshot)driver);
+        //Call getScreenshotAs method to create image file
+                File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
+        //Move image file to new destination
+                File DestFile=new File(screenshotPath+filename+".png");
+        //Copy file at destination
+        FileUtils.copyFile(SrcFile, DestFile);
+    }
 
 
     // Using testNG  @AfterClass  --> Closing The Browser ...
@@ -91,10 +75,8 @@ public class StarHealth_testNG_Examples extends Action {
     public synchronized void tearDown(){
 
         driver.quit();
-        logger.pass("User Successfully closed the driver session");
-        extent.flush();
-
 
     }
 
 }
+*/

@@ -14,6 +14,8 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.*;
 import java.util.*;
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 
 
 public class StarHealth_Cucumber {
@@ -27,6 +29,7 @@ public class StarHealth_Cucumber {
     private ExtentReports extent;
     private ExtentTest logger;
     private String phone_no ,parent;
+    private static int popupIsVisible=0;
 
 
 
@@ -62,7 +65,8 @@ public class StarHealth_Cucumber {
 
         try {
 
-            System.setProperty("webdriver.chrome.driver", "/Users/mithunroy/Downloads/BrowserDrivers/chromedriver");
+            //System.setProperty("webdriver.chrome.driver", "/Users/mithunroy/Downloads/BrowserDrivers/chromedriver");
+            WebDriverManager.chromedriver().driverVersion("106.0.5249.61").setup();
 
             // Instantiate a ChromeDriver class.
 
@@ -101,6 +105,7 @@ public class StarHealth_Cucumber {
             WebElement close_pop_up_link = new WebDriverWait(driver, Duration.ofSeconds(10))
                     .until(ExpectedConditions.elementToBeClickable(pageobj.close_WelcomeToStarHealthPopup()));
             logger.pass("Welcome To StarHealth pop up Close link is clickable");
+            popupIsVisible=1;
         }
         catch(Exception e){logger.fail("Welcome To StarHealth pop up Close link is not clickable");}
     }
@@ -108,8 +113,9 @@ public class StarHealth_Cucumber {
     @When("User close the pop up")
     public void user_close_the_pop_up() {
 
+        if(popupIsVisible==1){
         driver.findElement(pageobj.close_WelcomeToStarHealthPopup()).click();
-        logger.pass("Welcome To StarHealth pop up Close link is clicked successfully");
+        logger.pass("Welcome To StarHealth pop up Close link is clicked successfully");}
 
     }
 

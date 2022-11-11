@@ -18,6 +18,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pageObject.starHealtestNG;
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 
 import java.time.Duration;
 
@@ -51,17 +53,18 @@ public class StarHealth_testNG_PrintLinks extends Action {
         extent.setSystemInfo("User Name", "Test Team");
         spark.config().setDocumentTitle("Report Print All Links Application QA ");
         // Name of the report
-        spark.config().setReportName("StarHealth Application Using Selenium testNG ");
+        spark.config().setReportName("StarHealth Application - Home Print All Links");
         // Dark Theme
         spark.config().setTheme(Theme.STANDARD);
-        logger = extent.createTest("Validate StarHealth Application Using Selenium testNG");
+        logger = extent.createTest("StarHealth Application - Home Print All Links");
 
 
 
         // System Property for Chrome Driver
 
         try {
-            System.setProperty("webdriver.chrome.driver", "/Users/mithunroy/Downloads/BrowserDrivers/chromedriver");
+            //System.setProperty("webdriver.chrome.driver", "/Users/mithunroy/Downloads/BrowserDrivers/chromedriver");
+            WebDriverManager.chromedriver().driverVersion("106.0.5249.61").setup();
             // Instantiate a ChromeDriver class.
             driver = new ChromeDriver();
             //Maximize the browser

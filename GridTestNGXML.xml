@@ -7,15 +7,17 @@
 
 
 
-    <test name = "Resd_XL">
+    <test name = "Run In Chrome Browser">
 
         <classes>
-            <class name = "stepDef.StarHealth_testNG_PrintLinks">
-                <methods>
-                    <include name="action.testNG_XLReport"/>
-                </methods>
-            </class>
+            <class name = "gridImplementation.TestChrome"></class>
+        </classes>
+    </test>
 
+    <test name = "Run In Firefox Browser">
+
+        <classes>
+            <class name = "gridImplementation.TestFirefox"></class>
         </classes>
     </test>
 
