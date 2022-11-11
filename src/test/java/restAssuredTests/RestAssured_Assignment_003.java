@@ -39,6 +39,8 @@ public class RestAssured_Assignment_003 {
                 .get("https://petstore.swagger.io/v2/user/login");
 
         Assert.assertTrue(response.getBody().asString().contains("logged in user session:"));
+        System.out.println("Rest Assured Assignment 003 is Pass");
+
     }
 
 

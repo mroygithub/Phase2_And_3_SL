@@ -72,6 +72,8 @@ public class RestAssured_Assignment_001 {
                 .body("message",equalTo(String.valueOf(Response_id_From_POST_Call)))
                 .body("code",equalTo(200));
 
+        System.out.println("Rest Assured Assignment 001 is Pass");
+
     }
 
 

@@ -49,6 +49,8 @@ public class RestAssured_Assignment_004 {
                 .statusCode(HttpStatus.SC_OK)
                 .body("category.id",equalTo(20021))
                 .body("status",equalTo(StatusData.get("QA")));
+        System.out.println("Rest Assured Assignment 004 is Pass");
+
     }
 
 

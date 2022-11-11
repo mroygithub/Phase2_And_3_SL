@@ -56,6 +56,7 @@ public class RestAssured_Assignment_005 {
                 .statusCode(HttpStatus.SC_OK)
                 .body("status[0]",equalTo("sold"));
 
+        System.out.println("Rest Assured Assignment 005 is Pass");
 
 
 

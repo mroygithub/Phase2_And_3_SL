@@ -30,6 +30,8 @@ public class RestAssured_Assignment_006 {
                 .then().assertThat()
                 .statusCode(HttpStatus.SC_OK)
                 .body("message", equalTo("ok"));
+        System.out.println("Rest Assured Assignment 006 is Pass");
+
     }
 
 

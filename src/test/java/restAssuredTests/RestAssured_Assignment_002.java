@@ -30,6 +30,8 @@ public class RestAssured_Assignment_002 {
                 .body("username", equalTo("Uname001"))
                 .body("email", equalTo("Positive@Attitude.com"))
                 .body("$", hasKey("userStatus"));
+        System.out.println("Rest Assured Assignment 002 is Pass");
+
     }
 
 
