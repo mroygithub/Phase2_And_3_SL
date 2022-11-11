@@ -10,6 +10,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -20,7 +22,7 @@ import org.testng.annotations.Test;
 import pageObject.starHealtestNG;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-
+import java.net.URL;
 import java.time.Duration;
 
 
@@ -53,25 +55,29 @@ public class StarHealth_testNG_PrintLinks extends Action {
         extent.setSystemInfo("User Name", "Test Team");
         spark.config().setDocumentTitle("Report Print All Links Application QA ");
         // Name of the report
-        spark.config().setReportName("StarHealth Application - Home Print All Links");
+        spark.config().setReportName("StarHealth Application Using Selenium testNG ");
         // Dark Theme
         spark.config().setTheme(Theme.STANDARD);
-        logger = extent.createTest("StarHealth Application - Home Print All Links");
+        logger = extent.createTest("Validate StarHealth Application Using Selenium testNG");
 
 
 
         // System Property for Chrome Driver
 
         try {
+            //DesiredCapabilities dc = new DesiredCapabilities();
+            //dc.setBrowserName("chrome");
             //System.setProperty("webdriver.chrome.driver", "/Users/mithunroy/Downloads/BrowserDrivers/chromedriver");
-           // WebDriverManager.chromedriver().driverVersion("106.0.5249.61").setup();
-            WebDriverManager.chromedriver().driverVersion("102.0.5005.61").setup();
             // Instantiate a ChromeDriver class.
+            WebDriverManager.chromedriver().driverVersion("102.0.5005.61").setup();
             driver = new ChromeDriver();
+            //driver = new RemoteWebDriver(new URL("http://localhost:4444"),dc);
+            //driver = new ChromeDriver();
             //Maximize the browser
             driver.manage().window().maximize();
             driver.get("https://www.starhealth.in/");
             driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(30));
+            Thread.sleep(20000);
             logger.createNode("User can Successfully launch the Chrome Browser");
 
         }
@@ -80,7 +86,7 @@ public class StarHealth_testNG_PrintLinks extends Action {
 
 
     @Test
-    public synchronized void starhealth001_PrintAllLink(){
+    public synchronized void starhealth002_PrintAllLink(){
 
 
         // Get the Count of All Links ...

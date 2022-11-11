@@ -2,15 +2,26 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 
-<suite name = "Suite1" parallel="methods" thread-count="3">
+<suite name = "Suite1" parallel="false" thread-count="1">
 
 
-    <test name = "Rest_Assured_Assignment_Testing">
-
-        <classes>
-            <class name = "stepDef.RestAssuredTask"></class>
-
-        </classes>
+    <test name = "RestAssured_Assignment_001">
+        <classes><class name ="restAssuredTests.RestAssured_Assignment_001"></class></classes>
+    </test>
+    <test name = "RestAssured_Assignment_002">
+        <classes><class name ="restAssuredTests.RestAssured_Assignment_002"></class></classes>
+    </test>
+    <test name = "RestAssured_Assignment_003">
+        <classes><class name ="restAssuredTests.RestAssured_Assignment_003"></class></classes>
+    </test>
+    <test name = "RestAssured_Assignment_004">
+        <classes><class name ="restAssuredTests.RestAssured_Assignment_004"></class></classes>
+    </test>
+    <test name = "RestAssured_Assignment_005">
+        <classes><class name ="restAssuredTests.RestAssured_Assignment_005"></class></classes>
+    </test>
+    <test name = "RestAssured_Assignment_006">
+        <classes><class name ="restAssuredTests.RestAssured_Assignment_006"></class></classes>
     </test>
 
 

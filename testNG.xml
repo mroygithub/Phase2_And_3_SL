@@ -13,9 +13,9 @@
         <parameter name="url_text" value="starhealthins"></parameter>
         <classes>
             <class name = "stepDef.StarHealth_testNG_Home">
-            <methods>
-                <include name="starhealth001_HomePageValidation"/>
-            </methods>
+                <methods>
+                    <include name="starhealth001_HomePageValidation"/>
+                </methods>
             </class>
 
         </classes>
@@ -27,7 +27,7 @@
         <classes>
             <class name = "stepDef.StarHealth_testNG_PrintLinks">
                 <methods>
-                    <include name="starhealth001_PrintAllLink"/>
+                    <include name="starhealth002_PrintAllLink"/>
                 </methods>
             </class>
 

@@ -16,6 +16,10 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pageObject.starHealtestNG;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
+import java.net.URL;
 import java.time.Duration;
 import java.util.Iterator;
 import java.util.Set;
@@ -70,18 +74,20 @@ public class StarHealth_testNG_Home extends Action {
         // System Property for Chrome Driver
 
         try {
+            //DesiredCapabilities dc = new DesiredCapabilities();
+            //dc.setBrowserName("chrome");
             //System.setProperty("webdriver.chrome.driver", "/Users/mithunroy/Downloads/BrowserDrivers/chromedriver");
-            //WebDriverManager.chromedriver().driverVersion("106.0.5249.61").setup();
-            WebDriverManager.chromedriver().driverVersion("102.0.5005.61").setup();
-
             // Instantiate a ChromeDriver class.
+            //WebDriverManager.chromedriver().setup();
+            WebDriverManager.chromedriver().driverVersion("102.0.5005.61").setup();
             driver = new ChromeDriver();
+            //driver = new RemoteWebDriver(new URL("http://localhost:4444"),dc);
             //Maximize the browser
             driver.manage().window().maximize();
             driver.get("https://www.starhealth.in/");
             driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(30));
             logger.createNode("User can Successfully launch the Chrome Browser");
-
+            Thread.sleep(20000);
         }
         catch(Exception e){logger.fail("Instantiate of the Chrome Browser Failed");}
 

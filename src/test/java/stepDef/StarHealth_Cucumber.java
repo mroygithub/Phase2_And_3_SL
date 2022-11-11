@@ -29,7 +29,7 @@ public class StarHealth_Cucumber {
     private ExtentReports extent;
     private ExtentTest logger;
     private String phone_no ,parent;
-    private static int popupIsVisible=0;
+    private static int popupIsPresent = 0;
 
 
 
@@ -65,10 +65,8 @@ public class StarHealth_Cucumber {
 
         try {
 
-            //System.setProperty("webdriver.chrome.driver", "/Users/mithunroy/Downloads/BrowserDrivers/chromedriver");
-            //WebDriverManager.chromedriver().driverVersion("106.0.5249.61").setup();
+            ///System.setProperty("webdriver.chrome.driver", "/Users/mithunroy/Downloads/BrowserDrivers/chromedriver");
             WebDriverManager.chromedriver().driverVersion("102.0.5005.61").setup();
-
 
             // Instantiate a ChromeDriver class.
 
@@ -95,6 +93,7 @@ public class StarHealth_Cucumber {
             driver.navigate().to(testURL);
             driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(30));
             logger.createNode("starHeal application launched successfully");
+            Thread.sleep(20000);
         }
         catch(Exception e){logger.fail("starHeal application launched loading FAIL");}
 
@@ -107,7 +106,7 @@ public class StarHealth_Cucumber {
             WebElement close_pop_up_link = new WebDriverWait(driver, Duration.ofSeconds(10))
                     .until(ExpectedConditions.elementToBeClickable(pageobj.close_WelcomeToStarHealthPopup()));
             logger.pass("Welcome To StarHealth pop up Close link is clickable");
-            popupIsVisible=1;
+            popupIsPresent=1;
         }
         catch(Exception e){logger.fail("Welcome To StarHealth pop up Close link is not clickable");}
     }
@@ -115,9 +114,9 @@ public class StarHealth_Cucumber {
     @When("User close the pop up")
     public void user_close_the_pop_up() {
 
-        if(popupIsVisible==1){
-        driver.findElement(pageobj.close_WelcomeToStarHealthPopup()).click();
-        logger.pass("Welcome To StarHealth pop up Close link is clicked successfully");}
+        if(popupIsPresent==1) {
+            driver.findElement(pageobj.close_WelcomeToStarHealthPopup()).click();
+            logger.pass("Welcome To StarHealth pop up Close link is clicked successfully");}
 
     }
 
@@ -143,7 +142,7 @@ public class StarHealth_Cucumber {
 
         // It will return the parent window name as a String
 
-         parent=driver.getWindowHandle();
+        parent=driver.getWindowHandle();
 
         Set<String>s=driver.getWindowHandles();
 
@@ -212,10 +211,10 @@ public class StarHealth_Cucumber {
     @Then("User see Plan for My Family page")
     public void user_see_plan_for_my_family_page() {
 
-       try{
-        driver.findElement(pageobj.planForMyFamilyLabel()).isDisplayed();
-        logger.pass("User Successfully navigated to plan For My Family details page");}
-       catch(Exception e){logger.fail("User failed navigated to plan For My Family details page");}
+        try{
+            driver.findElement(pageobj.planForMyFamilyLabel()).isDisplayed();
+            logger.pass("User Successfully navigated to plan For My Family details page");}
+        catch(Exception e){logger.fail("User failed navigated to plan For My Family details page");}
 
     }
 
