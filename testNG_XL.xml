@@ -1,0 +1,41 @@
+<?xml version = "1.0"encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+<suite name = "Suite1" parallel="tests" thread-count="2">
+
+
+    <test name = "starhealth001">
+        <parameter name="altValue" value="Star Health"></parameter>
+        <parameter name="name" value="Tom Rick"></parameter>
+        <parameter name="mobile" value="7654567876"></parameter>
+        <parameter name="email" value="testNG@test.com"></parameter>
+        <parameter name="url_text" value="starhealthins"></parameter>
+        <classes>
+            <class name = "stepDef.StarHealth_testNG_Home">
+            <methods>
+                <include name="starhealth001_HomePageValidation"/>
+            </methods>
+            </class>
+
+        </classes>
+    </test>
+
+
+    <test name = "starhealth002">
+
+        <classes>
+            <class name = "stepDef.StarHealth_testNG_PrintLinks">
+                <methods>
+                    <include name="starhealth001_PrintAllLink"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+
+
+
+
+</suite>
+
