@@ -69,7 +69,7 @@ public class StarHealth_Cucumber {
 
 
             ///System.setProperty("webdriver.chrome.driver", "/Users/mithunroy/Downloads/BrowserDrivers/chromedriver");
-           // WebDriverManager.chromedriver().driverVersion("102.0.5005.61").setup();
+            WebDriverManager.chromedriver().driverVersion("102.0.5005.61").setup();
             //WebDriverManager.chromedriver().driverVersion("107.0.5304.110").setup();
 
             // Instantiate a ChromeDriver class.

@@ -1,25 +1,199 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="8" passed="7" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-09-15T14:14:29Z" name="Suite1" finished-at="2022-09-15T14:14:36Z" duration-ms="7586">
+  <suite started-at="2022-11-17T10:52:08Z" name="Suite1 (0)" finished-at="2022-11-17T10:52:49Z" duration-ms="41124">
     <groups>
     </groups>
-    <test started-at="2022-09-15T14:14:29Z" name="Rest_Assured_Assignment_Testing" finished-at="2022-09-15T14:14:36Z" duration-ms="7586">
-      <class name="stepDef.RestAssuredTask">
-        <test-method signature="Rest_Assured_Assignment_001()[pri:0, instance:stepDef.RestAssuredTask@6a472554]" started-at="2022-09-15T14:14:29Z" name="Rest_Assured_Assignment_001" finished-at="2022-09-15T14:14:36Z" duration-ms="7542" status="PASS">
+    <test started-at="2022-11-17T10:52:08Z" name="RestAssured_Assignment_001" finished-at="2022-11-17T10:52:20Z" duration-ms="11641">
+      <class name="restAssuredTests.RestAssured_Assignment_001">
+        <test-method signature="E2E_Testing()[pri:0, instance:restAssuredTests.RestAssured_Assignment_001@16aa0a0a]" started-at="2022-11-17T10:52:08Z" name="E2E_Testing" finished-at="2022-11-17T10:52:20Z" duration-ms="11641" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Rest_Assured_Assignment_001 -->
-        <test-method signature="Rest_Assured_Assignment_003()[pri:0, instance:stepDef.RestAssuredTask@6a472554]" started-at="2022-09-15T14:14:29Z" name="Rest_Assured_Assignment_003" finished-at="2022-09-15T14:14:33Z" duration-ms="4555" status="PASS">
+        </test-method> <!-- E2E_Testing -->
+      </class> <!-- restAssuredTests.RestAssured_Assignment_001 -->
+    </test> <!-- RestAssured_Assignment_001 -->
+    <test started-at="2022-11-17T10:52:25Z" name="RestAssured_Assignment_002" finished-at="2022-11-17T10:52:26Z" duration-ms="1376">
+      <class name="restAssuredTests.RestAssured_Assignment_002">
+        <test-method signature="RA_Assign_002()[pri:0, instance:restAssuredTests.RestAssured_Assignment_002@14ec4505]" started-at="2022-11-17T10:52:25Z" name="RA_Assign_002" finished-at="2022-11-17T10:52:26Z" duration-ms="1359" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[1 expectation failed.
+Expected status code <200> but was <404>.
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+Expected status code <200> but was <404>.
+
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:499)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:684)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:127)
+at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
+at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+at restAssuredTests.RestAssured_Assignment_002.RA_Assign_002(RestAssured_Assignment_002.java:27)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:377)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:138)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:465)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:451)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Rest_Assured_Assignment_003 -->
-        <test-method signature="Rest_Assured_Assignment_002()[pri:0, instance:stepDef.RestAssuredTask@6a472554]" started-at="2022-09-15T14:14:29Z" name="Rest_Assured_Assignment_002" finished-at="2022-09-15T14:14:33Z" duration-ms="4540" status="PASS">
+        </test-method> <!-- RA_Assign_002 -->
+      </class> <!-- restAssuredTests.RestAssured_Assignment_002 -->
+    </test> <!-- RestAssured_Assignment_002 -->
+    <test started-at="2022-11-17T10:52:26Z" name="RestAssured_Assignment_003" finished-at="2022-11-17T10:52:29Z" duration-ms="2742">
+      <class name="restAssuredTests.RestAssured_Assignment_003">
+        <test-method signature="RA_Assign_004()[pri:0, instance:restAssuredTests.RestAssured_Assignment_003@7920ba90]" started-at="2022-11-17T10:52:26Z" name="RA_Assign_004" finished-at="2022-11-17T10:52:29Z" duration-ms="2740" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Rest_Assured_Assignment_002 -->
-      </class> <!-- stepDef.RestAssuredTask -->
-    </test> <!-- Rest_Assured_Assignment_Testing -->
+        </test-method> <!-- RA_Assign_004 -->
+      </class> <!-- restAssuredTests.RestAssured_Assignment_003 -->
+    </test> <!-- RestAssured_Assignment_003 -->
+    <test started-at="2022-11-17T10:52:29Z" name="RestAssured_Assignment_004" finished-at="2022-11-17T10:52:30Z" duration-ms="1425">
+      <class name="restAssuredTests.RestAssured_Assignment_004">
+        <test-method signature="doPOSTRESTCall()[pri:0, instance:restAssuredTests.RestAssured_Assignment_004@6f3b5d16]" started-at="2022-11-17T10:52:29Z" name="doPOSTRESTCall" finished-at="2022-11-17T10:52:30Z" duration-ms="1423" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- doPOSTRESTCall -->
+      </class> <!-- restAssuredTests.RestAssured_Assignment_004 -->
+    </test> <!-- RestAssured_Assignment_004 -->
+    <test started-at="2022-11-17T10:52:35Z" name="RestAssured_Assignment_005" finished-at="2022-11-17T10:52:43Z" duration-ms="7488">
+      <class name="restAssuredTests.RestAssured_Assignment_005">
+        <test-method signature="RA_Assign_005()[pri:0, instance:restAssuredTests.RestAssured_Assignment_005@436a4e4b]" started-at="2022-11-17T10:52:35Z" name="RA_Assign_005" finished-at="2022-11-17T10:52:43Z" duration-ms="7487" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RA_Assign_005 -->
+      </class> <!-- restAssuredTests.RestAssured_Assignment_005 -->
+    </test> <!-- RestAssured_Assignment_005 -->
+    <test started-at="2022-11-17T10:52:48Z" name="RestAssured_Assignment_006" finished-at="2022-11-17T10:52:49Z" duration-ms="1414">
+      <class name="restAssuredTests.RestAssured_Assignment_006">
+        <test-method signature="RA_Assign_006()[pri:0, instance:restAssuredTests.RestAssured_Assignment_006@71c8becc]" started-at="2022-11-17T10:52:48Z" name="RA_Assign_006" finished-at="2022-11-17T10:52:49Z" duration-ms="1413" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RA_Assign_006 -->
+      </class> <!-- restAssuredTests.RestAssured_Assignment_006 -->
+    </test> <!-- RestAssured_Assignment_006 -->
+  </suite> <!-- Suite1 (0) -->
+  <suite started-at="2022-11-17T10:49:49Z" name="Suite1" finished-at="2022-11-17T10:52:03Z" duration-ms="134224">
+    <groups>
+    </groups>
+    <test started-at="2022-11-17T10:49:49Z" name="starhealth001" finished-at="2022-11-17T10:51:02Z" duration-ms="72773">
+      <class name="stepDef.StarHealth_testNG_Home">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:stepDef.StarHealth_testNG_Home@75f9eccc]" started-at="2022-11-17T10:49:49Z" name="setUp" finished-at="2022-11-17T10:50:33Z" duration-ms="44090" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="starhealth001_HomePageValidation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:stepDef.StarHealth_testNG_Home@75f9eccc]" started-at="2022-11-17T10:50:33Z" name="starhealth001_HomePageValidation" finished-at="2022-11-17T10:50:59Z" duration-ms="25749" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Star Health]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Tom Rick]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[7654567876]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[testNG@test.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[starhealthins]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- starhealth001_HomePageValidation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:stepDef.StarHealth_testNG_Home@75f9eccc]" started-at="2022-11-17T10:50:59Z" name="tearDown" finished-at="2022-11-17T10:51:02Z" duration-ms="2868" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- stepDef.StarHealth_testNG_Home -->
+    </test> <!-- starhealth001 -->
+    <test started-at="2022-11-17T10:51:07Z" name="starhealth002" finished-at="2022-11-17T10:52:03Z" duration-ms="56295">
+      <class name="stepDef.StarHealth_testNG_PrintLinks">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:stepDef.StarHealth_testNG_PrintLinks@3c87521]" started-at="2022-11-17T10:51:07Z" name="setUp" finished-at="2022-11-17T10:51:43Z" duration-ms="36049" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="starhealth002_PrintAllLink()[pri:0, instance:stepDef.StarHealth_testNG_PrintLinks@3c87521]" started-at="2022-11-17T10:51:43Z" name="starhealth002_PrintAllLink" finished-at="2022-11-17T10:52:02Z" duration-ms="19295" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- starhealth002_PrintAllLink -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:stepDef.StarHealth_testNG_PrintLinks@3c87521]" started-at="2022-11-17T10:52:02Z" name="tearDown" finished-at="2022-11-17T10:52:03Z" duration-ms="933" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- stepDef.StarHealth_testNG_PrintLinks -->
+    </test> <!-- starhealth002 -->
   </suite> <!-- Suite1 -->
 </testng-results>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="Failed suite [Suite1 (0)]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="1" name="RestAssured_Assignment_002(failed)" verbose="0">
+    <classes>
+      <class name="restAssuredTests.RestAssured_Assignment_002">
+        <methods>
+          <include name="RA_Assign_002"/>
+        </methods>
+      </class> <!-- restAssuredTests.RestAssured_Assignment_002 -->
+    </classes>
+  </test> <!-- RestAssured_Assignment_002(failed) -->
+</suite> <!-- Failed suite [Suite1 (0)] -->
