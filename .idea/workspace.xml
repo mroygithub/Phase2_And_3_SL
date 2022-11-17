@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a61a68cc-dcf9-4bec-8750-7c07d1646d0a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Report_Cucumber_Home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Report_Cucumber_Home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepDef/StarHealth_Cucumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDef/StarHealth_Cucumber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepDef/StarHealth_testNG_Home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDef/StarHealth_testNG_Home.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepDef/StarHealth_testNG_PrintLinks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDef/StarHealth_testNG_PrintLinks.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
