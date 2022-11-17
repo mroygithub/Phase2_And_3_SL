@@ -31,7 +31,7 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.3.0</version>
+            <version>4.6.0</version>
         </dependency>
 
 
@@ -126,13 +126,15 @@
                 <configuration>
 
                     <!-- This is For Cucumber maven Run -->
+                    <!--
                       <includes>
                           <include>**/testRunner*.java</include>
                       </includes>
+                      -->
 
                     <!-- This is For TestNG maven Run -->
                     <suiteXmlFiles>
-                        <suiteXmlFile>testNG.xml</suiteXmlFile>  <!--This is For TestNG Run-->
+                     <!--   <suiteXmlFile>testNG.xml</suiteXmlFile> --> <!--This is For TestNG Run-->
                         <suiteXmlFile>RestAssured.xml</suiteXmlFile>  <!--This is For Rest Assured Run-->
                     </suiteXmlFiles>
                     <testFailureIgnore>true</testFailureIgnore>
