@@ -9,6 +9,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -24,6 +25,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 import java.net.URL;
 import java.time.Duration;
+import java.util.Collections;
 
 
 public class StarHealth_testNG_PrintLinks extends Action {
@@ -71,9 +73,13 @@ public class StarHealth_testNG_PrintLinks extends Action {
             //dc.setBrowserName("chrome");
             //System.setProperty("webdriver.chrome.driver", "/Users/mithunroy/Downloads/BrowserDrivers/chromedriver");
             // Instantiate a ChromeDriver class.
+            ChromeOptions opt = new ChromeOptions();
             WebDriverManager.chromedriver().driverVersion("102.0.5005.61").setup();
+            opt.addArguments("start-maximized");
+            opt.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
+            opt.setExperimentalOption("useAutomationExtension", false);
            // WebDriverManager.chromedriver().driverVersion("107.0.5304.110").setup();
-            driver = new ChromeDriver();
+            driver = new ChromeDriver(opt);
             //driver = new RemoteWebDriver(new URL("http://localhost:4444"),dc);
             //driver = new ChromeDriver();
             //Maximize the browser
