@@ -75,9 +75,8 @@ public class StarHealth_testNG_PrintLinks extends Action {
             // Instantiate a ChromeDriver class.
             ChromeOptions opt = new ChromeOptions();
             WebDriverManager.chromedriver().driverVersion("102.0.5005.61").setup();
-            opt.addArguments("start-maximized");
-            opt.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
-            opt.setExperimentalOption("useAutomationExtension", false);
+            opt.addArguments("--headless");
+            opt.addArguments("--no-sandbox");
            // WebDriverManager.chromedriver().driverVersion("107.0.5304.110").setup();
             driver = new ChromeDriver(opt);
             //driver = new RemoteWebDriver(new URL("http://localhost:4444"),dc);
