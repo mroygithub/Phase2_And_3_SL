@@ -81,12 +81,12 @@ public class StarHealth_testNG_Home extends Action {
             //System.setProperty("webdriver.chrome.driver", "/Users/mithunroy/Downloads/BrowserDrivers/chromedriver");
             // Instantiate a ChromeDriver class.
             //WebDriverManager.chromedriver().setup();
-            ChromeOptions opt = new ChromeOptions();
+           // ChromeOptions opt = new ChromeOptions();
             WebDriverManager.chromedriver().driverVersion("102.0.5005.61").setup();
-            opt.addArguments("--headless");
-            opt.addArguments("--no-sandbox");
+          //  opt.addArguments("--headless");
+          //  opt.addArguments("--no-sandbox");
             //WebDriverManager.chromedriver().driverVersion("107.0.5304.110").setup();
-            driver = new ChromeDriver(opt);
+            driver = new ChromeDriver();
             //driver = new RemoteWebDriver(new URL("http://localhost:4444"),dc);
             //Maximize the browser
             driver.manage().window().maximize();
